@@ -1,14 +1,14 @@
-### COMP2113_40
+# COMP2113_40
 ## COMP2113 final project repository.
-# Team members:
+### Team members:
 1. **Name:** MALIK Muhammad Junaid Zubair | **UID:** 3035445974
 2. **Name:** REHMAN Ismail Abdul | **UID:** 3035604520
 
-# Game description:
+### Game description:
 We have planned to implement a game called ludo. It is a game that accommodates either two or four players (at least in our implementation). Each player has four tokens and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of their tokens to win. The player who finishes all the rounds first would be ranked first and the other 3 rankings are given accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
-# Basic rules and regulations:
+### Basic rules and regulations:
   - Each player has their starting point called base.
   - Token can only come out of the base, with a 6.
   -	If the player gets a 6 on a die, the player gets another turn.
@@ -18,14 +18,14 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Once all of the tokens reach home, the player finishes the game.
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
 
-# Coding requirements:
+### Coding requirements:
   1. **Generation of random game sets or events:** Rolling a dice at each user’s turn.
   2.	**Data structures for storing game status:** We will be using two types of data structures to represent different information. First, one data structure will be used during the game, showing the current status of the game, how do the players rank at a point in time. The second data structure will be used to store each user’s information including but not limited to username, winning percentage, last 5 games results, current XP, etc.
   3.	**Dynamic memory management:**
   4.	**File input/output:** Once the user enters his/her username, the file containing all the usernames will be used to check against the list of users and will respond accordingly whether such a user exists or not. And if exists, will load that user’s file, if not will create another user. File output will also be used to store each user’s information in a separate file. After each game, file output will be used to write to the file to update user’s information. 
   5. **Program codes in multiple files:** Most of the functions mentioned below will be written in separate files, will be compiled separately and all the files will then be linked together to generate a single executable.
   
-# Functions:
+### Functions:
 
 **Main function:**
  Main function will have the following features:
