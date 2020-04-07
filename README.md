@@ -21,14 +21,14 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 ### Coding requirements:
   1. **Generation of random game sets or events:** Rolling a dice at each user’s turn.
   2.	**Data structures for storing game status:** We will be using two types of data structures to represent different information.
-      1. ata structure will be used during the game, showing the current status of the game; usernames of the players and how do the players rank at a point in time. 
-      2. Second data structure will be used to store each user’s profile including but not limited to his/her username, winning percentage, last 5 games results, current XP, etc.
+      - ata structure will be used during the game, showing the current status of the game; usernames of the players and how do the players rank at a point in time. 
+      - Second data structure will be used to store each user’s profile including but not limited to his/her username, winning percentage, last 5 games results, current XP, etc.
   3.	**Dynamic memory management:** 
-      1. Dynamic arrays / pointers will be used to store the list of usernames read from a file called usernames.txt.
-      2. Dynamic arrays / pointers will also be used to store the usernames of the users playing the game.
+      - Dynamic arrays / pointers will be used to store the list of usernames read from a file called usernames.txt.
+      - Dynamic arrays / pointers will also be used to store the usernames of the users playing the game.
   4.	**File input/output:** 
-      1. Once the user inputs his/her username, the file, usernames.txt which contains all the usernames will be used to check whether such a user exists or not. And if it does, the program will load that user’s file, if not will create a new username. 
-      2. File output will also be used to store each user’s profile in a separate file <username>.txt. After each game, file output will be used to write to the file to update all users' profile, depending on the result of the game. 
+      - Once the user inputs his/her username, the file, usernames.txt which contains all the usernames will be used to check whether such a user exists or not. And if it does, the program will load that user’s file, if not will create a new username. 
+      - File output will also be used to store each user’s profile in a separate file <username>.txt. After each game, file output will be used to write to the file to update all users' profile, depending on the result of the game. 
   5. **Program codes in multiple files:** Most of the functions mentioned below will be written in separate files and will be compiled separately. All the files will then be linked together to generate a single executable.
   
 ### Functions:
