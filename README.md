@@ -5,23 +5,21 @@
 2. **Name:** REHMAN Ismail Abdul | **UID:** 3035604520
 
 ### Game description:
-We have planned to implement a game called ludo. A game that accommodates either 2 or 4 players. Each player has four tokens and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of their tokens to win. The player who finishes all the rounds first would be ranked first and the other 3 rankings are given accordingly.
+We have planned to implement a game called ludo. A game that accommodates either 2 or 4 players. Each player has four tokens and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of their tokens to win. The player who finishes all the rounds first would be ranked first and the other 3 are ranked accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
 ### Basic rules and regulations:
-  - Each player has their own starting point called base.
-  - Token can only come out of the base, with a number 6 on a dice.
+  - Each player has their own unique starting point called base.
+  - Token can only come out of the base with a number 6 on a dice.
   -	If the player gets a 6 on a dice, the player gets another turn.
-  -	Other players can kill your token if it’s not on a star (SS point in the board below). Killing means to send the token back to the start (i.e.    back to their base). You can see in the board below that tokens are in their bases at the start. 
-  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point(for example, BS is a safe points for player B and on one can kill him) In these types of safe points, only the specific player's token can be played( for example, on BS points no other player can come neither kill player B). Where they would need exact numbers to reach their home( for example, BH is the home point for player B). For instance, if a token is at the 81st step then it needs exactly 5 more steps to reach home.
-  -	Once the token reaches home it cannot be used again.
+  -	Other players can kill your token if it’s not on a star (denoted by **\*S** on the board below). Killing means to send the token back to the start (i.e. back to their base). You can see in the board below that tokens are in their respective bases at the start. 
+  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point (denoted by **<token symbol>S**). Points denoted by **<token symbol>S** cannot be used by any other player except the player with that token. If a token is at the 81st (1st ultimate safe point) step then it needs exactly 5 more steps to reach home (denoted by **<token symbol>H**).
+  -	Once the token reaches home, it cannot be used again and the player gets an extra turn.
   -	Once all of the tokens reach home, the player finishes the game.
-  -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
+  -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
 
 ### Board:
-[Board example toegther with the explanation](output.txt)
-
-**Explanation of board**
+[Board example together with some explanation](board.txt)
 
 ### Coding requirements:
   1. **Generation of random game sets or events:** Rolling a dice at each user’s turn.
