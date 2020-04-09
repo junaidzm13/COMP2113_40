@@ -18,7 +18,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Once all of the tokens reach home, the player finishes the game.
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
   ### Board
-                    XX XX XX                   
+                  XX XX XX                   
    R1    R2       XX YS SS       Y1    Y2    
                   XX YS XX                   
    R3    R4       XX YS XX       Y3    Y4    
@@ -33,6 +33,7 @@ XX XX XX XX XX XX    BH    XX XX XX XX SS XX
                   XX BS XX                   
    B3    B4       SS BS XX       G3    G4    
                   XX XX XX                   
+
 **Explanation of board**
 
 
