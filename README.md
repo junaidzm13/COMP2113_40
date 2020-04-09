@@ -19,7 +19,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
 
 ### Board:
-output.txt
+[Board example toegther with the explanation](output.txt)
 
 **Explanation of board**
 
