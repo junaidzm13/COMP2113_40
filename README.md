@@ -12,11 +12,30 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   - Each player has their own starting point called base.
   - Token can only come out of the base, with a number 6 on a dice.
   -	If the player gets a 6 on a dice, the player gets another turn.
-  -	Other players can kill your token if it’s not on a star (a safe point). Killing here means to send the token back to the start (i.e.    back to their base).
-  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point. Where they would need exact numbers to reach their home. For instance, if a token is at the 81st step then it needs exactly 5 more steps to reach home.
+  -	Other players can kill your token if it’s not on a star (SS point in the board below). Killing means to send the token back to the start (i.e.    back to their base). You can see in the board below that tokens are in their bases at the start. 
+  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point(for example, BS is a safe points for player B and on one can kill him) In these types of safe points, only the specific player's token can be played( for example, on BS points no other player can come neither kill player B). Where they would need exact numbers to reach their home( for example, BH is the home point for player B). For instance, if a token is at the 81st step then it needs exactly 5 more steps to reach home.
   -	Once the token reaches home it cannot be used again.
   -	Once all of the tokens reach home, the player finishes the game.
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
+  ### Board
+                    XX XX XX                   
+   R1    R2       XX YS SS       Y1    Y2    
+                  XX YS XX                   
+   R3    R4       XX YS XX       Y3    Y4    
+                  XX YS XX                   
+                  XX YS XX                   
+XX SS XX XX XX XX    YH    XX XX XX XX XX XX 
+XX RS RS RS RS RS RH    GH GS GS GS GS GS XX 
+XX XX XX XX XX XX    BH    XX XX XX XX SS XX 
+                  XX BS XX                   
+                  XX BS XX                   
+   B1    B2       XX BS XX       G1    G2    
+                  XX BS XX                   
+   B3    B4       SS BS XX       G3    G4    
+                  XX XX XX                   
+**Explanation of board**
+
+
 
 ### Coding requirements:
   1. **Generation of random game sets or events:** Rolling a dice at each user’s turn.
