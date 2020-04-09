@@ -17,8 +17,8 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Once the token reaches home it cannot be used again.
   -	Once all of the tokens reach home, the player finishes the game.
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
-  ### Board:
-  
+
+### Board:
 -- -- -- -- -- -- XX XX XX -- -- -- -- -- --
 -- R1 -- R2 -- -- XX YS SS -- -- Y1 -- Y2 --
 -- -- -- -- -- -- XX YS XX -- -- -- -- -- --
