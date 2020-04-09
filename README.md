@@ -19,23 +19,22 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
   ### Board:
   
-                  XX XX XX                   
-   R1    R2       XX YS SS       Y1    Y2    
-                  XX YS XX                   
-   R3    R4       XX YS XX       Y3    Y4    
-                  XX YS XX                   
-                  XX YS XX                   
-XX SS XX XX XX XX    YH    XX XX XX XX XX XX 
-XX RS RS RS RS RS RH    GH GS GS GS GS GS XX 
-XX XX XX XX XX XX    BH    XX XX XX XX SS XX 
-                  XX BS XX                   
-                  XX BS XX                   
-   B1    B2       XX BS XX       G1    G2    
-                  XX BS XX                   
-   B3    B4       SS BS XX       G3    G4    
-                  XX XX XX                   
-
-  
+-- -- -- -- -- -- XX XX XX -- -- -- -- -- -- 
+-- R1 -- R2 -- -- XX YS SS -- -- Y1 -- Y2 -- 
+-- -- -- -- -- -- XX YS XX -- -- -- -- -- -- 
+-- R3 -- R4 -- -- XX YS XX -- -- Y3 -- Y4 -- 
+-- -- -- -- -- -- XX YS XX -- -- -- -- -- -- 
+-- -- -- -- -- -- XX YS XX -- -- -- -- -- -- 
+XX SS XX XX XX XX -- YH -- XX XX XX XX XX XX 
+XX RS RS RS RS RS RH -- GH GS GS GS GS GS XX 
+XX XX XX XX XX XX -- BH -- XX XX XX XX SS XX 
+-- -- -- -- -- -- XX BS XX -- -- -- -- -- -- 
+-- -- -- -- -- -- XX BS XX -- -- -- -- -- -- 
+-- B1 -- B2 -- -- XX BS XX -- -- G1 -- G2 -- 
+-- -- -- -- -- -- XX BS XX -- -- -- -- -- -- 
+-- B3 -- B4 -- -- SS BS XX -- -- G3 -- G4 -- 
+-- -- -- -- -- -- XX XX XX -- -- -- -- -- -- 
+read: bad option: -1
 
   
   
