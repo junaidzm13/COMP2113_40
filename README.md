@@ -13,7 +13,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   - Token can only come out of the base with a number 6 on a dice.
   -	If the player gets a 6 on a dice, the player gets another turn.
   -	Other players can kill your token if it’s not on a star (denoted by **\*S** on the board below). Killing means to send the token back to the start (i.e. back to their base). You can see in the board below that tokens are in their respective bases at the start. 
-  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point (denoted by **<token symbol>S**). Points denoted by **<token symbol>S** cannot be used by any other player except the player with that token. If a token is at the 81st (1st ultimate safe point) step then it needs exactly 5 more steps to reach home (denoted by **<token symbol>H**).
+  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point (denoted by **\<token symbol\>S**). Points denoted by **\<token symbol\>S** cannot be used by any other player except the player with that token. If a token is at the 81st (1st ultimate safe point) step then it needs exactly 5 more steps to reach home (denoted by **\<token symbol\>H**).
   -	Once the token reaches home, it cannot be used again and the player gets an extra turn.
   -	Once all of the tokens reach home, the player finishes the game.
   -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
@@ -25,7 +25,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   1. **Generation of random game sets or events:** Rolling a dice at each user’s turn.
   2.	**Data structures for storing game status:** We will be using two types of data structures to represent different information. First data structure will be used during the game, showing the current status of the game; usernames of the players and how do the players rank at a point in time. Second data structure will be used to store each user’s profile including but not limited to his/her username, winning percentage, last 5 games results, current XP, etc.
   3.	**Dynamic memory management:** Dynamic arrays / pointers will be used to store the list of usernames read from a file called usernames.txt. Dynamic arrays / pointers will also be used to store the usernames of the users playing the game.
-  4.	**File input/output:** Once the user inputs his/her username, the file, usernames.txt which contains all the usernames will be used to check whether such a user exists or not. And if it does, the program will load that user’s file, if not will create a new username. File output will also be used to store each user’s profile in a separate file <username>.txt. After each game, file output will be used to write to the file to update all users' profile, depending on the result of the game. 
+  4.	**File input/output:** Once the user inputs his/her username, the file, usernames.txt which contains all the usernames will be used to check whether such a user exists or not. And if it does, the program will load that user’s file, if not will create a new username. File output will also be used to store each user’s profile in a separate file \<username\>.txt. After each game, file output will be used to write to the file to update all users' profile, depending on the result of the game. 
   5. **Program codes in multiple files:** Most of the functions mentioned below will be written in separate files and will be compiled separately. All the files will then be linked together to generate a single executable.
   
 ### Functions:
@@ -59,4 +59,4 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **has_won:** This function will take 2 parameters, a character representing the user’s token symbol and an array representing the board to check whether the user defined by that symbol has won the game. Function will return a Boolean.
 
-**update_profile:** This function will take 3 parameters, a string representing the user’s username, an integer representing the number of users and third an integer representing the rank of the user. The function will update the user’s profile by updating the data in his/her text file (<username>.txt).
+**update_profile:** This function will take 3 parameters, a string representing the user’s username, an integer representing the number of users and third an integer representing the rank of the user. The function will update the user’s profile by updating the data in his/her text file (\<username\>.txt).
