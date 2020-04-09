@@ -1,0 +1,23 @@
+
+                  XX XX XX                   
+   R1    R2       XX YS SS       Y1    Y2    
+                  SS YS XX                   
+   R3    R4       XX YS XX       Y3    Y4    
+                  XX YS XX                   
+                  XX YS XX                   
+XX SS XX XX XX XX    YH    XX XX XX SS XX XX 
+XX RS RS RS RS RS RH    GH GS GS GS GS GS XX 
+XX XX SS XX XX XX    BH    XX XX XX XX SS XX 
+                  XX BS XX                   
+                  XX BS XX                   
+   B1    B2       XX BS XX       G1    G2    
+                  XX BS SS                   
+   B3    B4       SS BS XX       G3    G4    
+                  XX XX XX                   
+                  
+Token representation: <token symbol><token number> (e.g. B1)
+XX: Playing area
+SS: Also part of the playing area but is a safe point.
+<token symbol>S: Denotes the ultimate safe point of a token with symbol <token symbol>,
+                 where you cannot be killed and is required to reach home.
+<token symbol>H: Home of the player with token symbol <token symbol>. 
