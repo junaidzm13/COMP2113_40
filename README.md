@@ -19,22 +19,22 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	If your tokens completed their rounds faster than other player’s tokens, you are ranked above that player.
 
 ### Board:
-  ### 00 00 00 00 00 00 XX XX XX 00 00 00 00 00 00
-  ### -- R1 -- R2 -- -- XX YS SS -- -- Y1 -- Y2 --
-  ### -- -- -- -- -- -- XX YS XX -- -- -- -- -- --
-  ### -- R3 -- R4 -- -- XX YS XX -- -- Y3 -- Y4 --
-  - -- -- -- -- -- -- XX YS XX -- -- -- -- -- --
-  - -- -- -- -- -- -- XX YS XX -- -- -- -- -- --
-  - XX SS XX XX XX XX -- YH -- XX XX XX XX XX XX
-  - XX RS RS RS RS RS RH -- GH GS GS GS GS GS XX
-  - XX XX XX XX XX XX -- BH -- XX XX XX XX SS XX
-  - -- -- -- -- -- -- XX BS XX -- -- -- -- -- --
-  - -- -- -- -- -- -- XX BS XX -- -- -- -- -- --
-  - -- B1 -- B2 -- -- XX BS XX -- -- G1 -- G2 --
-  - -- -- -- -- -- -- XX BS XX -- -- -- -- -- --
-  - -- B3 -- B4 -- -- SS BS XX -- -- G3 -- G4 --
-  - -- -- -- -- -- -- XX XX XX -- -- -- -- -- -- 
-  - read: bad option: -1
+OO OO OO OO OO OO XX XX XX OO OO OO OO OO OO
+OO R1 OO R2 OO OO XX YS SS OO OO Y1 OO Y2 OO
+OO OO OO OO OO OO XX YS XX OO OO OO OO OO OO
+OO R3 OO R4 OO OO XX YS XX OO OO Y3 OO Y4 OO
+OO OO OO OO OO OO XX YS XX OO OO OO OO OO OO
+OO OO OO OO OO OO XX YS XX OO OO OO OO OO OO
+XX SS XX XX XX XX OO YH OO XX XX XX XX XX XX
+XX RS RS RS RS RS RH OO GH GS GS GS GS GS XX
+XX XX XX XX XX XX OO BH OO XX XX XX XX SS XX
+OO OO OO OO OO OO XX BS XX OO OO OO OO OO OO
+OO OO OO OO OO OO XX BS XX OO OO OO OO OO OO
+OO B1 OO B2 OO OO XX BS XX OO OO G1 OO G2 OO
+OO OO OO OO OO OO XX BS XX OO OO OO OO OO OO
+OO B3 OO B4 OO OO SS BS XX OO OO G3 OO G4 OO
+OO OO OO OO OO OO XX XX XX OO OO OO OO OO OO
+
 
 **Explanation of board**
 
