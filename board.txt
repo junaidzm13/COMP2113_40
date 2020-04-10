@@ -23,4 +23,7 @@ SS: Also part of the playing area but is a safe point for everyone. This means a
                  where the token cannot be killed, and other player's tokens cannot access these points.
 <token symbol>H: Home of the player with token symbol <token symbol> (e.g. BH).
 
-The board above shows that there 4 players reresented by four different token symbols with each player having 4 tokens to play. Currently, all tokens of each of the 4 players are in their respective bases as shown above, therefore, they are not in the playing area. Once they roll a die on their turn and get a 6, players can select anyone of their token to enter the play area. The ultimate goal of each token is to reach their home represented by <token symbol>H.
+The board above shows that there 4 players reresented by four different token symbols with each player having 4 tokens 
+to play. Currently, all tokens of each of the 4 players are in their respective bases as shown above, therefore, they 
+are not in the playing area. Once they roll a die on their turn and get a 6, players can select anyone of their token 
+to enter the play area. The ultimate goal of each token is to reach their home represented by <token symbol>H.
