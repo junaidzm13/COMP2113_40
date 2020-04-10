@@ -5,7 +5,7 @@
 2. **Name:** REHMAN Ismail Abdul | **UID:** 3035604520
 
 ### Game description:
-We have planned to implement a game called ludo. A game that accommodates 2,3 or 4 players. Each player has four tokens and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of their tokens to win. The player who finishes all the rounds first would be ranked first and the other 3 are ranked accordingly.
+We have planned to implement a game called ludo. A game that accommodates 2, 3 or 4 players. Each player has four tokens and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of their tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
 ### Basic rules and regulations:
@@ -32,7 +32,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **Main function:**
  Main function will have the following features:
-  -	Will ask the user how many players (2,3 or 4)
+  -	Will ask the user how many players (2, 3 or 4)
   -	Depending on the input will ask how many users to include and how many computer bots.
   -	Then depending on the number of users, will prompt the users for usernames.
   -	Will ask each user to choose their token symbol (this choice depends on XP, the higher your XP the more token symbols you unlock)
@@ -43,20 +43,20 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Will update each user’s profile
   -	Will then prompt user whether to play another match or to quit
 
-**read_username:** This function will prompt user for the username input until number of players are equal to what have been inputted main function and will accordingly either load the user’s profile or will ask for confirmation to create a new user with that username.
+**read_username:** This function will prompt the user for the username input and will accordingly either load the user’s profile or will ask for confirmation to create a new user with that username.
 
-**create_board:** This function will create a board as 2D array of 15 * 15. 
+**create_board:** This function will create a board as an array. 
 
-**show_board:** This function will take an array as a parameter and will show the board as an output to the screen after every move by each player. Hence, it will show the updated board with new positions of token everytime.
+**show_board:** This function will take an array as a parameter and will show the board as an output to the screen.
 
-**roll_dice:** This function will generate a random number between 1 to 6 imitating a dice.
+**roll_dice:** This function will generate a random number between 1 and 6 imitating a dice.
 
 **which_token:** This function will take 3 parameters: an array representing a board, an integer representing the result of rolling a dice and a character representing the player's token symbol. And will output to the screen the tokens (1 to 4) that the player is allowed to move depending on the tokens' current positions and the number obtained from rolling a dice. Will keep prompting the user unless the user inputs the number of the allowed token. The function will return this token number. If all tokens will be unable to move, the function will return -1. 
 
-**kills_token:** This function will take 4 parameters: an array representing the board, 2 integers, one is a token number, the other is a number say dice_output representing the output of a dice and 1 character representing the player's token symbol. This function will check whether the move made by the player will kill any other player’s token. Function will return a Boolean representing true or false. (Killing means whether the current player’s token will land on any other player’s token which is not on a safe point called a star) 
+**kills_token:** This function will take 4 parameters: an array representing the board, 2 integers, one is a token number, the other is a number say dice_output representing the output of a dice and 1 character representing the player's token symbol. This function will check whether the move made by the player will kill any other player’s token. Function will return a boolean representing true or false. (Killing means whether the current player’s token will land on any other player’s token which is not on a safe point called a star) 
 
 **make_move:** This function will take 4 parameters. An array representing the board, two integers representing the token (between 1 and 4) and the number of steps that it will move and a character representing the current player's token symbol. The function will modify the array representing the board accordingly.
 
-**has_won:** This function will take 2 parameters, a character representing the user’s token symbol and an array representing the board to check whether the user defined by that symbol has won the game. Function will return a Boolean.
+**has_won:** This function will take 2 parameters, a character representing the user’s token symbol and an array representing the board to check whether the user defined by that symbol has won the game. Function will return a boolean.
 
 **update_profile:** This function will take 3 parameters, a string representing the user’s username, an integer representing the number of users and third an integer representing the rank of the user. The function will update the user’s profile by updating the data in his/her text file (\<username\>.txt).
