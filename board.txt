@@ -1,4 +1,4 @@
-
+Board:
                   XX XX XX                   
    R1    R2       XX YS SS       Y1    Y2    
                   SS YS XX                   
@@ -15,12 +15,12 @@ XX XX SS XX XX XX    BH    XX XX XX XX SS XX
    B3    B4       SS BS XX       G3    G4    
                   XX XX XX                   
                   
-token symbol: There are four players (which is token symbol)  in this game. R, Y, G, B are four token symbol.
+token symbol: R, Y, G and B are four token symbols representing four different players.
 Token representation: <token symbol><token number> (e.g. B1, B2, B3, B4)
-XX: Playing area
+XX: Playing area.
 SS: Also part of the playing area but is a safe point for everyone. This means a player cannot be killed on these points.
-<token symbol>S: Denotes the ultimate safe point of a token with symbol <token symbol>,
-                 where you cannot be killed, and other player cannot come to this point and is required to reach home.
-<token symbol>H: Home of the player with token symbol <token symbol>. 
+<token symbol>S: Denotes the ultimate safe point of a token with symbol <token symbol> (e.g. BS),
+                 where the token cannot be killed, and other player's tokens cannot access these points.
+<token symbol>H: Home of the player with token symbol <token symbol> (e.g. BH).
 
--The board above shows that there 4 players/token symbol with each players having 4 tokens to play. Currently, all the tokens of each of 4 players are in their respective bases as shown above, therefore, they are not in playing area. Once they roll a die and get a six, players can select anyone of their token to enter the play area. The ultimate goal of each token is to reach their home <token symbol>H.
+The board above shows that there 4 players reresented by four different token symbols with each player having 4 tokens to play. Currently, all tokens of each of the 4 players are in their respective bases as shown above, therefore, they are not in the playing area. Once they roll a die on their turn and get a 6, players can select anyone of their token to enter the play area. The ultimate goal of each token is to reach their home represented by <token symbol>H.
