@@ -41,6 +41,7 @@ int main(){
   players_current_progress[2].token = 'R';
   players_current_progress[3].token = 'B';
   //Set the board
+  string board[15][15];
   set_the_board();
   show_board();
 
