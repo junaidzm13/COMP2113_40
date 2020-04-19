@@ -10,36 +10,38 @@ Struct Profile{
   int played;
   int won;
   string win_percentage;
-}
+};
 
-Struct current_traits{
+Struct Player_current_details{
   char token;
   int player_number;
   string status;
   int rank;
-}
+};
 
 int main(){
+  //-----------------------------------------------------------------------------------------
   //Number of players
   int num_players = 0;
-  while(num_players >= 2 && num_players <= 4){
+  while(num_players < 2 || num_players > 4){
     cout << "Please enter the number of players: (2,3 or 4)" << endl;
     cin >> num_players;
   }
   //Ask for usernames. Ask for token symbols
-  current_traits array2[];
-  current_traits * players_current_progress = tokens1[num_players];
-  Profile array1[];
-  Profile * players_profile = array1[num_players];
-  for(int i = 1; i <= num_players; i++){
+  string username, chosen_tokens = "";
+  Player_current_details * players_current_progress = new Player_current_details [num_players];
+  Profile * players_profile = new Profile [num_players];
+  for(int i = 0; i < num_players; i++){
     username = enter_username();
-    players_profile[i].player_number = i;
+    players_current_progress[i].player_number = i + 1;
     load_profile(players_profile[i], username);
+    players_current_progress[i].token = select_token(players_profile[i].token_symbols, \
+      chosen_tokens, chosen_tokens.length());
+    chosen_tokens = chosen_tokens + players_current_progress[i].token;
   }
-  players_current_progress[0].token = 'Y';
-  players_current_progress[1].token = 'G';
-  players_current_progress[2].token = 'R';
-  players_current_progress[3].token = 'B';
+  
+  //-------------------------------------------------------------------------------------------
+  
   //Set the board
   string board[15][15];
   set_the_board();
@@ -71,5 +73,7 @@ int main(){
 
   //update_profile
   //play again??
-
+  delete [] players_current_progress;
+  delete [] players_profile;
+  return 0;
 }
