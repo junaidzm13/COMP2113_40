@@ -146,7 +146,7 @@ void set_the_board(player_details *player, int player_number, string board[][15]
       board[3][7]="GS";
       board[4][7]="GS";
       board[5][7]="GS";
-      board[6][7]="YH";
+      board[6][7]="GH";
 
 
       board[6][1]="SS";
