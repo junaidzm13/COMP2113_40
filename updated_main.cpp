@@ -8,6 +8,12 @@
 #include <iomanip>
 using namespace std;
 
+//Ismail
+struct cordinates{
+  int x;
+  int y;
+};
+
 struct Profile{
   string username;
   int level;
