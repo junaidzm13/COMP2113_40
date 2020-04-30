@@ -204,35 +204,28 @@ bool can_move(string board[][15], int player_number, int dice_roll, int row_inde
 }
 
 string will_kill(string board[][15], int player_number, string token, int dice_roll, \
-  int row_index, int col_index){
-    int col_index2 = col_index, row_index2 = row_index;
+  int row_index2, int col_index2){
     bool land_at_home, land_at_star, not_on_empty, not_on_own_token, kills;
-    token_movement(player_number, token, dice_roll, row_index2, col_index2);
-    if(col_index2 == col_index && row_index2 == row_index){
-      kills = 0;
+    land_at_star = ((col_index2 == 1 || col_index2 == 12) && row_index2 == 6 || \
+      (col_index2 == 2 || col_index2 == 13) && row_index2 == 8 || \
+      col_index2 == 6 && (row_index2 == 2 || row_index2 == 13) || \
+      col_index2 == 8 && (row_index2 == 1 || row_index2 == 12));
+    if(player_number == 1){
+      land_at_home = (row_index2 == 7 && col_index2 > 0 && col_index2 <= 6);
+    }
+    else if(player_number == 4){
+      land_at_home = (col_index2 == 7 && row_index2 > 0 && row_index2 <= 6);
+    }
+    else if(player_number == 2){
+      land_at_home = (row_index2 == 7 && col_index2 >= 8 && col_index2 < 14);
     }
     else{
-      land_at_star = ((col_index2 == 1 || col_index2 == 12) && row_index2 == 6 || \
-        (col_index2 == 2 || col_index2 == 13) && row_index2 == 8 || \
-        col_index2 == 6 && (row_index2 == 2 || row_index2 == 13) || \
-        col_index2 == 8 && (row_index2 == 1 || row_index2 == 12));
-      if(player_number == 1){
-        land_at_home = (row_index2 == 7 && col_index2 > 0 && col_index2 <= 6);
-        }
-      else if(player_number == 4){
-        land_at_home = (col_index2 == 7 && row_index2 > 0 && row_index2 <= 6);
-      }
-      else if(player_number == 2){
-        land_at_home = (row_index2 == 7 && col_index2 >= 8 && col_index2 < 14);
-      }
-      else{
-        land_at_home = (col_index2 == 7 && row_index2 >= 8 && row_index2 < 14)
-      }
-      not_on_empty = (board[row_index2][col_index2] != "xx" && board[row_index2][col_index2].length() == 2);
-      not_on_own_token = board[row_index2][col_index2][0] != token[0];
-
-      kills = (! land_at_star && ! land_at_home && not_on_empty && not_on_own_token);
+      land_at_home = (col_index2 == 7 && row_index2 >= 8 && row_index2 < 14)
     }
+    not_on_empty = (board[row_index2][col_index2] != "xx" && board[row_index2][col_index2].length() == 2);
+    not_on_own_token = board[row_index2][col_index2][0] != token[0];
+
+    kills = (! land_at_star && ! land_at_home && not_on_empty && not_on_own_token);
     if(kills == 1){
       return board[row_index2][col_index2];
     }
