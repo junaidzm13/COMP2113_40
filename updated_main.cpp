@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <cstdlib> //Ismail put this
+#include <ctime> //Ismail put this
+#include <string.h> //Ismail put this
 #include <fstream>
 #include <cmath>
 #include <iomanip>
