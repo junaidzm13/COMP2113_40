@@ -203,7 +203,7 @@ bool can_move(string board[][15], int player_number, int dice_roll, int row_inde
   can_be_moved; //else return 1
 }
 
-string will_kill(string board[][15], int player_number, string token, int dice_roll, \
+string will_kill(string board[][15], int player_number, string token, \
   int row_index2, int col_index2){
     bool land_at_home, land_at_star, not_on_empty, not_on_own_token, kills;
     land_at_star = ((col_index2 == 1 || col_index2 == 12) && row_index2 == 6 || \
