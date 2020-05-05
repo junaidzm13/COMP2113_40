@@ -5,17 +5,19 @@
 2. **Name:** REHMAN Ismail Abdul | **UID:** 3035604520
 
 ### Game description:
-We have planned to implement a game called ludo. A game that accommodates 2, 3 or 4 players. Each player has four tokens and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of their tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
+We have planned to implement a game called ludo. A game that accommodates 2, 3 or 4 players, which will be asked at the start of game. Each player has four tokens at start and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of the four tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
 ### Basic rules and regulations:
   - Each player has their own unique starting point called base.
   - Token can only come out of the base with a number 6 on a dice.
   -	If the player gets a 6 on a dice, the player gets another turn.
-  -	Other players can kill your token if it’s not on a star (denoted by **\*S** on the board below). Killing means to send the token back to the start (i.e. back to their base). You can see in the board below that tokens are in their respective bases at the start. 
+  - If the player gets three 6's in a row, the player looses his turn.
+  -	Other players can kill your token if it’s not on a star (denoted by **\*S** on the board). Killing means to send the token back to the start (i.e. back to their base). You can see in the board  that tokens are in their respective bases at the start.
+  - A player can create a temporary safe point anywhere by placing two of his own token at a point. That point will be a temporary safe point for everyone until only one (or none) token is left at that point. 
   -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point (denoted by **\<token symbol\>S**). Points denoted by **\<token symbol\>S** cannot be used by any other player except the player with that token. If a token is at the 81st (1st ultimate safe point) step then it needs exactly 5 more steps to reach home (denoted by **\<token symbol\>H**).
-  -	Once the token reaches home, it cannot be used again and the player gets an extra turn.
-  -	Once all of the tokens reach home, the player finishes the game.
+  -	Once the token reaches home, it cannot be used again.
+  -	Once all of the tokens of a player reach home, that player finishes the game while others continue to play the game until only one player is left in the game.
   -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
 
 ### Board:
