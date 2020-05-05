@@ -38,7 +38,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Depending on the input will ask how many users to include and how many computer bots.
   -	Then depending on the number of users, will prompt the users for usernames.
   -	Will ask each user to choose their token symbol (this choice depends on XP, the higher your XP the more token symbols you unlock)
-  -	Next, will set the board.
+  -	Next, will set the board depending on the number of players playing
   -	The players will play turn by turn
   -	Players will keep winning, until only 1 player remains
   -	The program will then output the result of the game
