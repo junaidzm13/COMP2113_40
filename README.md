@@ -45,9 +45,11 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Will update each user’s profile
   -	Will then prompt user whether to play another match or to quit
 
-**roll_dice**:
+**roll_dice**: This function will generate a random number between 1 and 6 imitating a dice. If there is a 6, it will roll the dice again. If there are three 6's in a row, the player looses his turn.
 
 **set_the_board**:
+
+**show_board**:
 
 **available_tokens**:
 
@@ -97,7 +99,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **send_home**:
 
-**show_board**:
+
 
 
 
@@ -107,8 +109,6 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 **create_board:** This function will create a board as an array. 
 
 **show_board:** This function will take an array as a parameter and will show the board as an output to the screen.
-
-**roll_dice:** This function will generate a random number between 1 and 6 imitating a dice.
 
 **which_token:** This function will take 3 parameters: an array representing a board, an integer representing the result of rolling a dice and a character representing the player's token symbol. And will output to the screen the tokens (1 to 4) that the player is allowed to move depending on the tokens' current positions and the number obtained from rolling a dice. Will keep prompting the user unless the user inputs the number of the allowed token. The function will return this token number. If all tokens will be unable to move, the function will return -1. 
 
