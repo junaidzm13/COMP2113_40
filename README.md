@@ -49,7 +49,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **set_the_board**:
 
-**show_board**:
+**show_board**:This function will take an array as a parameter and will show the board as an output to the screen.
 
 **available_tokens**:
 
