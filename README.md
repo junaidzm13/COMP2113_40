@@ -9,9 +9,9 @@ We have implemented a game called ludo. The game will accommodate 2, 3 or 4 play
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
 ### Game manual:
-## How to setup / play:
+### How to setup / play:
 
-## Rules and regulations
+#### Rules and regulations
   - Each player has their own unique starting point called base.
   - Token can only come out of the base with a number 6 on a dice.
   -	If the player gets a 6 on a dice, the player gets another turn.
@@ -23,7 +23,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Once all of the tokens of a player reach home, that player finishes the game while others continue to play the game until only one player is left in the game.
   -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
   
-## Special features:
+### Special features:
   -
 
 ### Board:
