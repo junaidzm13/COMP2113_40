@@ -5,10 +5,13 @@
 2. **Name:** REHMAN Ismail Abdul | **UID:** 3035604520
 
 ### Game description:
-We have planned to implement a game called ludo. A game that accommodates 2, 3 or 4 players, which will be asked at the start of game. Each player has four tokens at start and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of the four tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
+We have implemented a game called ludo. The game will accommodate 2, 3 or 4 players. Each player will have four tokens at the start and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of the four tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
-### Basic rules and regulations:
+### Game manual:
+## How to setup / play:
+
+## Rules and regulations
   - Each player has their own unique starting point called base.
   - Token can only come out of the base with a number 6 on a dice.
   -	If the player gets a 6 on a dice, the player gets another turn.
@@ -19,6 +22,9 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Once the token reaches home, it cannot be used again.
   -	Once all of the tokens of a player reach home, that player finishes the game while others continue to play the game until only one player is left in the game.
   -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
+  
+## Special features:
+  -
 
 ### Board:
 [Board example together with some explanation](board.txt)
