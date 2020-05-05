@@ -45,6 +45,63 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Will update each user’s profile
   -	Will then prompt user whether to play another match or to quit
 
+**roll_dice**:
+
+**set_the_board**:
+
+**available_tokens**:
+
+**select_token**:
+
+**read_username**:
+
+**create_new**:
+
+**load_profile**:
+
+**enter_username**:
+
+**getxp**:
+
+**tokens_unlock**:
+
+**update_profile**:
+
+**token_movement**:
+
+**itoc**:
+
+**ctoi**:
+
+**check_digit**:
+
+**can_move**:
+
+**will_kill**:
+
+**has_won**:
+
+**linear_search**:
+
+**searchVector**:
+
+**printVector**:
+
+**populateVector**:
+
+**make_a_move**:
+
+**replace_old_position**:
+
+**replace_new_position**:
+
+**send_home**:
+
+**show_board**:
+
+
+
+
 **read_username:** This function will prompt the user for the username input and will accordingly either load the user’s profile or will ask for confirmation to create a new user with that username.
 
 **create_board:** This function will create a board as an array. 
