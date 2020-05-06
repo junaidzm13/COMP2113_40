@@ -10,6 +10,10 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 ### Game manual:
 ### How to setup / play:
+  - The first step is to compile and run the program. To compile do "make ludo_main".
+  - Then you will have to enter the number of players as a single integer. Number of players can only be between 2 and 4.
+  - Then depending on the number of players, each user will be asked to input his/her username and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user should only enter a character.
+  - Once, this step is completed 
 
 #### Rules and regulations
   - Each player has their own unique starting point called base.
@@ -56,7 +60,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **roll_dice**: This function will generate a random number between 1 and 6 imitating a dice. If there is a 6, it will roll the dice again. If there are three 6's in a row, the player looses his turn.
 
-**set_the_board**:
+**set_the_board**: This function takes a 15x15 2D-Array, a dynamic array of structure Player_current_details and an integer representing the number of players. It populates the array with the required strings that immitates a ludo board.
 
 **show_board**:This function will take an array as a parameter and will show the board as an output to the screen.
 
@@ -80,9 +84,9 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **token_movement**:
 
-**itoc**:
+**itoc**: This function takes a single integer and converts it to the type char.
 
-**ctoi**:
+**ctoi**: This function takes a numerical character and converts it to the type int.
 
 **check_digit**:
 
@@ -90,7 +94,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 **will_kill**:
 
-**has_won**:
+**has_won**: This function takes a 2-D array representing a board and an integer representing the player number (1, 2, 3 or 4) and outputs a boolean representing whether the player has won or not.
 
 **linear_search**:
 
