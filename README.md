@@ -44,15 +44,15 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 **Main function:**
  Main function will have the following features:
   -	Will ask the user how many players (2, 3 or 4)
-  -	Depending on the input will ask how many users to include and how many computer bots.
-  -	Then depending on the number of users, will prompt the users for usernames.
+  -	Then will prompt each player for his / her username.
+  - If username exists, will load that user's profile or otherwise, will create a new profile.
   -	Will ask each user to choose their token symbol (this choice depends on XP, the higher your XP the more token symbols you unlock)
   -	Next, will set the board depending on the number of players playing
   -	The players will play turn by turn
   -	Players will keep winning, until only 1 player remains
   -	The program will then output the result of the game
-  -	Will update each user’s profile
-  -	Will then prompt user whether to play another match or to quit
+  -	Will then update each user’s profile
+  -	Will then output the updated profile of each user.
 
 **roll_dice**: This function will generate a random number between 1 and 6 imitating a dice. If there is a 6, it will roll the dice again. If there are three 6's in a row, the player looses his turn.
 
