@@ -24,17 +24,20 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
   
 ### Special features:
-  -
+    - Based on the user's XP (accumulated by winning) user will unlock various token symbols. Then user can choose his/her token symbol for the curremt game. While in traditional ludo there are only 4 symbols available R(red), B(blue), G,(green) and Y(yellow).
+    - Moreover, each player will have his unique username, and that username will be used to retreive the user's profile.
+    - Profile will have information on the user's level, XP, total matches played, total matches won, available tokens and winning percentage.
+    - Profile for each user will also be displayed at the end of the game.
 
 ### Board:
 [Board example together with some explanation](board.txt)
 
 ### Coding requirements:
-  1. **Generation of random game sets or events:** Rolling a dice at each user’s turn.
-  2.	**Data structures for storing game status:** We will be using two types of data structures to represent different information. First data structure will be used during the game, showing the current status of the game; usernames of the players and how do the players rank at a point in time. Second data structure will be used to store each user’s profile including but not limited to his/her username, winning percentage, last 5 games results, current XP, etc.
-  3.	**Dynamic memory management:** Dynamic arrays / pointers will be used to store the list of usernames read from a file called usernames.txt. Dynamic arrays / pointers will also be used to store the usernames of the users playing the game.
-  4.	**File input/output:** Once the user inputs his/her username, the file, usernames.txt which contains all the usernames will be used to check whether such a user exists or not. And if it does, the program will load that user’s file, if not will create a new username. File output will also be used to store each user’s profile in a separate file \<username\>.txt. After each game, file output will be used to write to the file to update all users' profile, depending on the result of the game. 
-  5. **Program codes in multiple files:** Most of the functions mentioned below will be written in separate files and will be compiled separately. All the files will then be linked together to generate a single executable.
+  1. **Generation of random game sets or events:** Rolling the dice at each user’s turn.
+  2.	**Data structures for storing game status:** We have used two types of data structures to represent different information. First data structure will be used during the game, showing the current status of the game; usernames of the current players, their rank, and their chosen tokens. Second data structure will be used to store each user’s profile including his/her username, level, XP, matches played, matches won, winning percentage and all the unlocked tokens.
+  3.	**Dynamic memory management:** Dynamic arrays have been used to store the data structures namely *Profile* and *Current_player_details* of all the players. The size is equal to the number of players. Secondly, we have also implemented integer vectors which store the result of all the dice rolls at a single turn (in *make_a_move* function).
+  4.	**File input/output:** File input/output has been done several times during a single run of the game. First, the file named *usernames.txt* is read to check whether the entered username already exists. If it does the file corresponding to that username is opened and read to load the profile of that user. If it does not exist, then the based on user's confirmation, a new file with name \<username\>.txt is created and the new username is written down in *usernames.txt*. And once the game ends, all the player's profiles are updated by writing down in their respective files.
+  5. **Program codes in multiple files:** All of the functions have been separated into different files. Each file contains one or more functions depending on the task that they perform. We also have a separate header file for both of the major structures defined. In total we have 20 different files (including header files).
   
 ### Functions:
 
