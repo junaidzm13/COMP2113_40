@@ -1,31 +1,35 @@
-# COMP2113_40
-## COMP2113 final project repository (Group 40)
+# COMP2113_40 final project repository (Group 40)
 ### Team members:
 1. **Name:** MALIK Muhammad Junaid Zubair | **UID:** 3035445974
 2. **Name:** REHMAN Ismail Abdul | **UID:** 3035604520
 
-### Game description:
+## Game description:
 We have implemented a game called ludo. The game will accommodate 2, 3 or 4 players. Each player will have four tokens at the start and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of the four tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
 
-### Game manual:
+## Game manual:
 ### How to setup / play:
   - The first step is to compile and run the program. To compile do "make ludo_main".
   - Then you will have to enter the number of players as a single integer. Number of players can only be between 2 and 4.
-  - Then depending on the number of players, each user will be asked to input his/her username and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user should only enter a character.
-  - Once, this step is completed 
+  - Then depending on the number of players, each user will be asked to input his/her username and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user can only enter a character.
+  - Once, this step is completed, the board will be displayed and the player 1 will be prompted to roll the dice. *Note: Player numbers are given in the same order as the entered usernames*
+  - From this onwards, each player will roll the dice on his/her turn and will move the tokens accordingly. After the dice roll at each player's turn, the player will prompted to select the dice roll that he/she would like to move first (if there are more than one dice rolls). Then the player is prompted to select the token that he/she would like to move. Obviously, this depends whether he/she has any token that can move.
+  - The first player to reach home marked by \<token_symbol\>H (i.e. YH) on the board, with all 4 tokens is given the rank of 1. The subsequent rankings are given accordingly.
+  - The remaining players keep playing until a single player remains. At this point, the game ends and that match's rankings are displayed.
+  - Then finally based on the results of the game, each player's profile is updated and displayed.
 
-#### Rules and regulations
-  - Each player has their own unique starting point called base.
+### Game rules:
+  - Each player has their own unique starting point called base marked by the empty block with 4 tokens in the middle. You can see in the board that tokens are in their respective bases at the start.
+  - There are total of 8 in-game safe points marked by *SS*. Apart from that each player has their ultimate safe points marked by *\<token symbol\>S*. Called ultimate safe point, becasue once the token reaches these points it cannot be killed as no other player can access these points and after this the token is only on its way home.
+  - The *xx* marks the playing area together with in-game safe points *SS*. The difference is that at *xx* the token can be killed whereas at *SS* it cannot be. Killing means to send the token back to the start (i.e. back to their base). *Please refer to the board below for further explanation to the above points.*
   - Token can only come out of the base with a number 6 on a dice.
-  -	If the player gets a 6 on a dice, the player gets another turn.
-  - If the player gets three 6's in a row, the player looses his turn.
-  -	Other players can kill your token if it’s not on a star (denoted by **\*S** on the board). Killing means to send the token back to the start (i.e. back to their base). You can see in the board  that tokens are in their respective bases at the start.
-  - A player can create a temporary safe point anywhere by placing two of his own token at a point. That point will be a temporary safe point for everyone until only one (or none) token is left at that point. 
-  -	Once each token completes 81 steps (i.e. one whole round) they will reach their ultimate safe point (denoted by **\<token symbol\>S**). Points denoted by **\<token symbol\>S** cannot be used by any other player except the player with that token. If a token is at the 81st (1st ultimate safe point) step then it needs exactly 5 more steps to reach home (denoted by **\<token symbol\>H**).
+  -	Moreover, if the player gets a 6 on a dice, the player gets another turn. However, if a player gets three consecutive 6s, the player loses his/her turn. 
   -	Once the token reaches home, it cannot be used again.
   -	Once all of the tokens of a player reach home, that player finishes the game while others continue to play the game until only one player is left in the game.
-  -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
+  -	If your all 4 tokens complete their rounds faster than the other player’s tokens, you are ranked above that player.
+  - A player can create a temporary safe point anywhere by placing two of his own token at a single point. That point will be a temporary safe point for everyone until only one (or none) token is left at that point. First of this kind of safe point will be shown as *\*1* on the board (*\*2* and so on depending on the total number of such positions at a point in time).
+  - Moreover, if there is only 1 token on a particular safe-point, that particular token will be displayed rather than *SS*. However, if more than one token resides on a single safe-point then that point will be displayed as *1S* (or *2S* and so on depending on the total number of such safe points at a point in time).
+  - All these positions (*\*1* and *1S*) where more than one token reside, will be displayed separately under the board, reporting the tokens residing there.
   
 ### Special features:
   - Based on the user's XP (accumulated by winning) user will unlock various token symbols. Then user can choose his/her token symbol for the curremt game. While in traditional ludo there are only 4 symbols available R(red), B(blue), G,(green) and Y(yellow).
@@ -33,19 +37,19 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   - Profile will have information on the user's level, XP, total matches played, total matches won, available tokens and winning percentage.
   - Profile for each user will also be displayed at the end of the game.
 
-### Board:
+## Board:
 [Board example together with some explanation](board.txt)
 
-### Coding requirements:
+## Coding requirements:
   1. **Generation of random game sets or events:** Rolling the dice at each user’s turn.
   2.	**Data structures for storing game status:** We have used two types of data structures to represent different information. First data structure will be used during the game, showing the current status of the game; usernames of the current players, their rank, and their chosen tokens. Second data structure will be used to store each user’s profile including his/her username, level, XP, matches played, matches won, winning percentage and all the unlocked tokens.
   3.	**Dynamic memory management:** Dynamic arrays have been used to store the data structures namely *Profile* and *Current_player_details* of all the players. The size is equal to the number of players. Secondly, we have also implemented integer vectors which store the result of all the dice rolls at a single turn (in *make_a_move* function).
   4.	**File input/output:** File input/output has been done several times during a single run of the game. First, the file named *usernames.txt* is read to check whether the entered username already exists. If it does the file corresponding to that username is opened and read to load the profile of that user. If it does not exist, then the based on user's confirmation, a new file with name \<username\>.txt is created and the new username is written down in *usernames.txt*. And once the game ends, all the player's profiles are updated by writing down in their respective files.
   5. **Program codes in multiple files:** All of the functions have been separated into different files. Each file contains one or more functions depending on the task that they perform. We also have a separate header file for both of the major structures defined. In total we have 20 different files (including header files).
   
-### Functions:
+## Functions:
 
-**Main function:**
+#### Main function:
  Main function will have the following features:
   -	Will ask the user how many players (2, 3 or 4)
   -	Then will prompt each player for his / her username.
@@ -58,77 +62,83 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	Will then update each user’s profile
   -	Will then output the updated profile of each user.
 
-**roll_dice**: This function will generate a random number between 1 and 6 imitating a dice. If there is a 6, it will roll the dice again. If there are three 6's in a row, the player looses his turn.
+#### roll_dice
+This function generates a random number between 1 and 6 imitating a dice. If there is a 6, it will roll the dice again. If there are three 6's in a row, the player loses his turn.
 
-**set_the_board**: This function takes a 15x15 2D-Array, a dynamic array of structure Player_current_details and an integer representing the number of players. It populates the array with the required strings that immitates a ludo board.
+#### set_the_board
+This function takes a 15x15 2D-Array, a dynamic array of structure Player_current_details and an integer representing the number of players. It populates the array with the required strings that immitates a ludo board.
 
-**show_board**:This function will take an array as a parameter and will show the board as an output to the screen.
+#### show_board
+This function takes a 2-D array representing a board, a pointer pointing to the dynamic array containing structure Player_current_details and an integer representing the number of players as a parameter and will show the board as an output to the screen.
 
-**available_tokens**:
-
-**select_token**:
-
-**read_username**:
-
-**create_new**:
-
-**load_profile**:
-
-**enter_username**:
-
-**getxp**:
-
-**tokens_unlock**:
-
-**update_profile**:
-
-**token_movement**:
-
-**itoc**: This function takes a single integer and converts it to the type char.
-
-**ctoi**: This function takes a numerical character and converts it to the type int.
-
-**check_digit**:
-
-**can_move**:
-
-**will_kill**:
-
-**has_won**: This function takes a 2-D array representing a board and an integer representing the player number (1, 2, 3 or 4) and outputs a boolean representing whether the player has won or not.
-
-**linear_search**:
-
-**searchVector**:
-
-**printVector**:
-
-**populateVector**:
-
-**make_a_move**:
-
-**replace_old_position**:
-
-**replace_new_position**:
-
-**send_home**:
+#### select_token
+This function takes three parameters two strings, one representing the available tokens to the user depending on user's XP and other representing the already chosen tokens by other players, and one integer representing the length of the the second string. This function prompts the user to choose tokens from the displayed list of available tokens.
+**Helper function**
+*available_tokens*
+This function is a helper function to select_token and takes same parameters as select_token. It returns a string containing all the tokens availabale to user.
 
 
+#### enter_username
+This function takes no parameter. Prompts the user to enter his/her username. Calls read_username to check whether such a username exists. If it does returns that username if it does not creates a new file \<username\>.txt and returns the new username entered.
+**Helper functions**
+*read_username*:
+This function takes a string username and returns a boolean whether such a username exists in the file *usernames.txt* or not.
+
+*create_new*
+This function takes a string representing a new username, and creates a text file \<username\>.txt representing the profile of the user.
+
+#### load_profile
+This function takes a structure *Profile* as pass by reference and a string representing user's username. This function reads the file of the user and populates the structure accordingly.
+ 
+#### update_profile
+This function takes *Profile* structure representing a profile of a user as pass-by-reference and two integers, one representing the number of players and the other the rank obtained by the user. This function updates the user's text file and updates the structure as well.
+**Helper functions:**
+*getxp*
+This function takes an integer representing the rank of the player and returns an integer representing xp gained.
+
+*tokens_unlock*
+This function takes an integer representing the level and returns a string representing the token unlocked on that particular level.
+
+#### output_profile
+This function takes a user's profile as data structure *Profile* and outputs to the screen the updated profile of the user.
+
+#### make_a_move:
+
+**Helper Functions:**
+
+*token_movement*
+Takes 4 integers as parameters: player_number, dice_roll, row_index and col_index (the last are passed-by-reference). row_index and col_index represents the current row and column indices of the token. The function based on the player_number and dice_roll modifies the row_index and col_index to represent new row and column indices of the token.
+
+*itoc*: This function takes a single integer *num* and converts it to the type char.
+
+*ctoi*: This function takes a numerical character and converts it to the type int.
+
+*check_digit*
+This function is used to protect the program against crashing. This function takes a string, checks if its a single digit and returns the digit as an integer. If its not a single digit the function keeps on promping the user to enter a single digit.
 
 
+*can_move*
+This function takes 4 parameters, a 2-D 15x15 array representing the board, 2 integers, one representing the player number and the other representing the dice_roll and 4th a string representing the chosen token. This function returns a boolean checking whether the particular token can move or not.
 
+*will_kill*
+This function takes 5 parameters, a 2-D 15x15 array representing the board, 3 integers, one representing the player number and the other two representing the new row and column indices of the token respectively and 5th a string representing the chosen token. This function checks whether this token kills another token, if it does this token will return the string containing the token being killed. If no token is being killed, this function will return an empty string.
 
-**read_username:** This function will prompt the user for the username input and will accordingly either load the user’s profile or will ask for confirmation to create a new user with that username.
+*has_won*: This function takes a 2-D array representing a board and an integer representing the player number (1, 2, 3 or 4) and outputs a boolean whether the player has won or not.
 
-**create_board:** This function will create a board as an array. 
+*linear_search*
+This function takes 3 parameters an integer array representing position (row index = position\[0\] and col index = position\[1\]), a 2-D string array (board) and a string (token). This function searches the board for the token represented by the string. If such token is found it modifies the position array representing the position of the token otherwise both array elements are assigned -1.
 
-**show_board:** This function will take an array as a parameter and will show the board as an output to the screen.
+*searchVector*
+This function takes two arguments an integer vector *dices* and an integer *selected_dice*. This function searches the vector and returns the first index where selected_dice is found. Otherwise, returns -1.
 
-**which_token:** This function will take 3 parameters: an array representing a board, an integer representing the result of rolling a dice and a character representing the player's token symbol. And will output to the screen the tokens (1 to 4) that the player is allowed to move depending on the tokens' current positions and the number obtained from rolling a dice. Will keep prompting the user unless the user inputs the number of the allowed token. The function will return this token number. If all tokens will be unable to move, the function will return -1. 
+*printVector*
+This function prints a integer vector *dices* containing all the dice rolls in a prescribed fashion.
 
-**kills_token:** This function will take 4 parameters: an array representing the board, 2 integers, one is a token number, the other is a number say dice_output representing the output of a dice and 1 character representing the player's token symbol. This function will check whether the move made by the player will kill any other player’s token. Function will return a boolean representing true or false. (Killing means whether the current player’s token will land on any other player’s token which is not on a safe point called a star) 
+*populateVector*
+This function takes an integer vector *v* (passed-by-reference), and two integers one representing total number of dice rolls *Num_of_rolls* and the other representing the value of the dice roll that's not equal to 6, *dice_number*. This function populates the vector with the all the obtained dice rolls at a single turn.
 
-**make_move:** This function will take 4 parameters. An array representing the board, two integers representing the token (between 1 and 4) and the number of steps that it will move and a character representing the current player's token symbol. The function will modify the array representing the board accordingly.
+*replace_old_position*
 
-**has_won:** This function will take 2 parameters, a character representing the user’s token symbol and an array representing the board to check whether the user defined by that symbol has won the game. Function will return a boolean.
+*replace_new_position*
 
-**update_profile:** This function will take 3 parameters, a string representing the user’s username, an integer representing the number of users and third an integer representing the rank of the user. The function will update the user’s profile by updating the data in his/her text file (\<username\>.txt).
+*send_home*
