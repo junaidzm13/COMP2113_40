@@ -73,14 +73,14 @@ This function takes a 2-D array representing a board, a pointer pointing to the 
 
 #### select_token
 This function takes three parameters two strings, one representing the available tokens to the user depending on user's XP and other representing the already chosen tokens by other players, and one integer representing the length of the the second string. This function prompts the user to choose tokens from the displayed list of available tokens.
-**Helper function**
+
 *available_tokens*
 This function is a helper function to select_token and takes same parameters as select_token. It returns a string containing all the tokens availabale to user.
 
 
 #### enter_username
 This function takes no parameter. Prompts the user to enter his/her username. Calls read_username to check whether such a username exists. If it does returns that username if it does not creates a new file \<username\>.txt and returns the new username entered.
-**Helper functions**
+
 *read_username*:
 This function takes a string username and returns a boolean whether such a username exists in the file *usernames.txt* or not.
 
@@ -92,7 +92,7 @@ This function takes a structure *Profile* as pass by reference and a string repr
  
 #### update_profile
 This function takes *Profile* structure representing a profile of a user as pass-by-reference and two integers, one representing the number of players and the other the rank obtained by the user. This function updates the user's text file and updates the structure as well.
-**Helper functions:**
+
 *getxp*
 This function takes an integer representing the rank of the player and returns an integer representing xp gained.
 
@@ -104,7 +104,6 @@ This function takes a user's profile as data structure *Profile* and outputs to 
 
 #### make_a_move:
 
-**Helper Functions:**
 
 *token_movement*
 Takes 4 integers as parameters: player_number, dice_roll, row_index and col_index (the last are passed-by-reference). row_index and col_index represents the current row and column indices of the token. The function based on the player_number and dice_roll modifies the row_index and col_index to represent new row and column indices of the token.
