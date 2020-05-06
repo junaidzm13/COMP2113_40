@@ -24,10 +24,10 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   -	If your tokens completed rounds faster than the other player’s tokens, you are ranked above that player.
   
 ### Special features:
-    - Based on the user's XP (accumulated by winning) user will unlock various token symbols. Then user can choose his/her token symbol for the curremt game. While in traditional ludo there are only 4 symbols available R(red), B(blue), G,(green) and Y(yellow).
-    - Moreover, each player will have his unique username, and that username will be used to retreive the user's profile.
-    - Profile will have information on the user's level, XP, total matches played, total matches won, available tokens and winning percentage.
-    - Profile for each user will also be displayed at the end of the game.
+  - Based on the user's XP (accumulated by winning) user will unlock various token symbols. Then user can choose his/her token symbol for the curremt game. While in traditional ludo there are only 4 symbols available R(red), B(blue), G,(green) and Y(yellow).
+  - Moreover, each player will have his unique username, and that username will be used to retreive the user's profile.
+  - Profile will have information on the user's level, XP, total matches played, total matches won, available tokens and winning percentage.
+  - Profile for each user will also be displayed at the end of the game.
 
 ### Board:
 [Board example together with some explanation](board.txt)
