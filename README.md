@@ -12,7 +12,7 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
   - The first step is to compile and run the program. To compile do "make ludo_main".
   - Then you will have to enter the number of players as a single integer. Number of players can only be between 2 and 4.
   - Then depending on the number of players, each user will be asked to input his/her username and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user can only enter a character.
-  - Once, this step is completed, the board will be displayed and the player 1 will be prompted to roll the dice. *Note: Player numbers are given in the same order as the entered usernames*
+  - Once, this step is completed, the board will be displayed and the player 1 will be prompted to roll the dice by pressing any key. *Note: Player numbers are given in the same order as the entered usernames*
   - From this onwards, each player will roll the dice on his/her turn and will move the tokens accordingly. After the dice roll at each player's turn, the player will prompted to select the dice roll that he/she would like to move first (if there are more than one dice rolls). Then the player is prompted to select the token that he/she would like to move. Obviously, this depends whether he/she has any token that can move.
   - The first player to reach home marked by \<token_symbol\>H (i.e. YH) on the board, with all 4 tokens is given the rank of 1. The subsequent rankings are given accordingly.
   - The remaining players keep playing until a single player remains. At this point, the game ends and that match's rankings are displayed.
@@ -103,6 +103,8 @@ This function takes an integer representing the level and returns a string repre
 This function takes a user's profile as data structure *Profile* and outputs to the screen the updated profile of the user.
 
 #### make_a_move:
+This function takes a dynamic array *player* which contains the details of current players that are playing, four integers, and a 2D array. The first integer *turn_count* represents which player's turn  it is. The second integer *num_players* represent the total number of players who are playing the game. The third integer *No_of_sixes* represent the number of sixes a player got (can only be 0,1,2). The fourth integer *dice_number* represents the number which a player got on the last roll of a die in his turn which can only be 1,2,3,4,5 here. The 2D array named *board* stores the details of token positions.
+The purpose of this function is to allow a player to move his token depending on the result from roll_dice function. The selected token by the player will be moved and after every single move, a board will be printed to show the movement of his selected token.
 
 
 *token_movement*
@@ -137,7 +139,13 @@ This function prints a integer vector *dices* containing all the dice rolls in a
 This function takes an integer vector *v* (passed-by-reference), and two integers one representing total number of dice rolls *Num_of_rolls* and the other representing the value of the dice roll that's not equal to 6, *dice_number*. This function populates the vector with the all the obtained dice rolls at a single turn.
 
 *replace_old_position*
+This function takes a dynamic array *player* which contains the details of current players that are playing, three integers, one string, and a 2D array. The 2D array named *board* stores the details of token positions. The string *token* represents the token selected by the player to move. The integer *row* and the integer *column* represtents the position on the board. This position represents the position from which the selected token move to another new postion on board. The third integer *turn_count* represents which player's turn  it is. 
+After the player selects a valid token to move, this function will change the last position of token on board as it shouls be.
 
 *replace_new_position*
+This function takes a dynamic array *player* which contains the details of current players that are playing, four integers, one string, and a 2D array. The 2D array named *board* stores the details of token positions. The string *token* represents the token selected by the player to move. The first integer *player_number* represent the total number of players who are playing the game. The integer *row* and the integer *column* represtents the position on the board. This position represents the new postion where the player's selected token will move on the board. The fourth integer *turn_count* represents which player's turn it is. 
+After the player selects a valid token to move, this function will change the new position of token on board as it should be.
 
 *send_home*
+This function takes a 2D array, one string and one integer.  The 2D array named *board* stores the details of token positions. The integer *player_killed* represents which player is being killed. The string *token2* represents the token that is being killed.
+This function will modify the board by sending back the killed token(token2) to it respective bases. It means token2 will now be stored in the respective players base.
