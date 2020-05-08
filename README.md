@@ -145,6 +145,6 @@ After the player selects a valid token to move, this function will change the la
 This function takes a dynamic array *player* which contains the details of current players that are playing, four integers, one string, and a 2D array. The 2D array named *board* stores the details of token positions. The string *token* represents the token selected by the player to move. The first integer *player_number* represent the total number of players who are playing the game. The integer *row* and the integer *column* represtents the position on the board. This position represents the new postion where the player's selected token will move on the board. The fourth integer *turn_count* represents which player's turn it is. 
 After the player selects a valid token to move, this function will change the new position of token on board as it should be.
 
-*send_home*
+*send_base*
 This function takes a 2D array, one string and one integer.  The 2D array named *board* stores the details of token positions. The integer *player_killed* represents which player is being killed. The string *token2* represents the token that is being killed.
 This function will modify the board by sending back the killed token(token2) to it respective bases. It means token2 will now be stored in the respective players base.
