@@ -11,7 +11,8 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 ### How to setup / play:
   - The first step is to compile and run the program. To compile execute "make ludo_main".
   - Then you will have to enter the number of players as a [single integer]. Number of players can only be between 2 and 4.
-  - Then depending on the number of players, each user will be asked to input his/her username [(username can have no whitespaces)] and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user can only enter a [character].
+  - Then depending on the number of players, each user will be asked to input his/her username [(username can have no whitespaces)] and if invalid username entered will be prompted "Do you want to create a new profile? (Y/N)", then the user should enter either a Y or N [Cannot enter anything other than a character].  
+  - Afterwards, the user will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user can only enter a [character].
   - Once, this step is completed, the board will be displayed and the player 1 will be prompted to roll the dice by pressing any character. *Note: Player numbers are given in the same order as the entered usernames*
   - From this onwards, each player will roll the dice on his/her turn and will move the tokens accordingly. After the dice roll at each player's turn, the player will prompted to select the dice roll that he/she would like to move first (if there are more than one dice rolls). Then the player is prompted to select the token that he/she would like to move. Obviously, this depends on whether user has any token that can move.
   - The first player to reach home marked by \<token_symbol\>H (i.e. YH) on the board, with all 4 tokens is given the rank of 1. The subsequent rankings are given accordingly.
@@ -77,11 +78,11 @@ This function takes two strings, one representing the available tokens to the us
 *available_tokens*
 This function is a helper function to select_token and takes same parameters as select_token and an integer representing the size of chosen_tokens. It returns a string containing all the tokens availabale to the user.
 
-#### enter_username
-This function takes no parameters. Prompts the user to enter his/her username. Calls read_username to check whether such a username exists. If it does, returns that username and if it does not, creates a new file \<username\>.txt and returns the new username entered.
+#### read_username
+This function takes a string username, a pointer to an array of Player_current_details (structure) and an int i which equals player number -1. Returns a boolean. Returns true if and only if the username exists in the file *usernames.txt* and is not aleady taken by any other player currently playing.
 
-*read_username*:
-This function takes a string username and returns a boolean whether such a username exists in the file *usernames.txt* or not.
+*enter_username*:
+This function takes two parameters, a pointer to an array of Player_current_details players and an int i, which equals player number - 1. Prompts the user to enter his/her username. Calls read_username to check whether such a username exists or has already been taken. If it does exist and is not taken by any other player playing function returns that username and if it does not exist or has already been taken the function creates a new file \<username\>.txt and returns the new username entered.
 
 *create_new*
 This function takes a string username representing a new username, and creates a text file \<username\>.txt representing the profile of the user and writes this username to *usernames.txt*.
