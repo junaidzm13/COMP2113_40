@@ -28,7 +28,7 @@ int main(){
   Profile * players_profile = new Profile [num_players];
   for(int i = 0; i < num_players; i++){
     cout << "Player " << i + 1 << ":" << endl;
-    username = enter_username();
+    username = enter_username(players_current_progress, i);
     players_current_progress[i].player_number = i + 1;
     players_current_progress[i].username = username;
     load_profile(players_profile[i], username);
