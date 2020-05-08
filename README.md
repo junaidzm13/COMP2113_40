@@ -9,11 +9,11 @@ More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_ga
 
 ## Game manual:
 ### How to setup / play:
-  - The first step is to compile and run the program. To compile do "make ludo_main".
-  - Then you will have to enter the number of players as a single integer. Number of players can only be between 2 and 4.
-  - Then depending on the number of players, each user will be asked to input his/her username and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user can only enter a character.
-  - Once, this step is completed, the board will be displayed and the player 1 will be prompted to roll the dice by pressing any key. *Note: Player numbers are given in the same order as the entered usernames*
-  - From this onwards, each player will roll the dice on his/her turn and will move the tokens accordingly. After the dice roll at each player's turn, the player will prompted to select the dice roll that he/she would like to move first (if there are more than one dice rolls). Then the player is prompted to select the token that he/she would like to move. Obviously, this depends whether he/she has any token that can move.
+  - The first step is to compile and run the program. To compile execute "make ludo_main".
+  - Then you will have to enter the number of players as a [single integer]. Number of players can only be between 2 and 4.
+  - Then depending on the number of players, each user will be asked to input his/her username [(username can have no whitespaces)] and then will be prompted with a list of token symbols to select from. This list only includes characters and therefore, the user can only enter a [character].
+  - Once, this step is completed, the board will be displayed and the player 1 will be prompted to roll the dice by pressing any character. *Note: Player numbers are given in the same order as the entered usernames*
+  - From this onwards, each player will roll the dice on his/her turn and will move the tokens accordingly. After the dice roll at each player's turn, the player will prompted to select the dice roll that he/she would like to move first (if there are more than one dice rolls). Then the player is prompted to select the token that he/she would like to move. Obviously, this depends on whether user has any token that can move.
   - The first player to reach home marked by \<token_symbol\>H (i.e. YH) on the board, with all 4 tokens is given the rank of 1. The subsequent rankings are given accordingly.
   - The remaining players keep playing until a single player remains. At this point, the game ends and that match's rankings are displayed.
   - Then finally based on the results of the game, each player's profile is updated and displayed.
