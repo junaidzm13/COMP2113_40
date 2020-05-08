@@ -60,7 +60,7 @@ string enter_username(Player_current_details *players, int i){
   cout << "Please enter your username: ";
   cin >> username;
   while(read_username(username, players, i) != 1){
-    cout << "No user found with that username.\nDo you want to create a new profile? (Y/N)" << endl;
+    cout << "Invalid username.\nDo you want to create a new profile? (Y/N)" << endl;
     cin >> createnew;
     while(createnew != 'Y' && createnew != 'N'){
       cout << "Please press Y or N to continue: ";
