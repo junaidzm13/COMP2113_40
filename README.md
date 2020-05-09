@@ -6,6 +6,7 @@
 ## Game description:
 We have implemented a game called ludo. The game will accommodate 2, 3 or 4 players. Each player will have four tokens at the start and will play on their own (in other words no teams will be allowed). Each player will roll a dice on their turn and will move tokens accordingly. Each player’s goal is to finish the whole round of the board with each of the four tokens to win. The player who finishes all the rounds first would be ranked first and the other players are ranked accordingly.
 More information can be found here: https://en.wikipedia.org/wiki/Ludo_(board_game)
+*Reference: The idea of the game dates back to the 6th century. However, the name ludo was given by England in 1896 when they patented the game.*
 
 ## Game manual:
 ### How to setup / play:
