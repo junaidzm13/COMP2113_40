@@ -430,7 +430,7 @@ void make_a_move(Player_current_details *player, int turn_count, int num_players
 
     if (dice_roll == 6){
 
-      //if the token is in the bases (or home) and the selected dice number is six then it will move the token out of the bases.
+      //if the token is in the bases and the selected dice number is six then it will move the token out of the bases.
       if ((position[0] == 1 && position[1] == 1) || (position[0]==1 && position[1]==3) || (position[0]==1 && position[1]==11) || (position[0]==1 && position[1]==13) || (position[0]==3 && position[1]==1) || (position[0]==3 && position[1]==3) || (position[0]==3 && position[1]==11) || (position[0]==3 && position[1]==13) || (position[0]==11 && position[1]==1) || (position[0]==11 && position[1]==3) || (position[0]==11 && position[1]==11) || (position[0]==11 && position[1]==13) || (position[0]==13 && position[1]==1) || (position[0] == 13 && position[1]==3) || (position[0]==13 && position[1]==11) || (position[0]==13 && position[1]==13)){
         if (turn_count == 0){
           position[0] = 6;
@@ -456,7 +456,7 @@ void make_a_move(Player_current_details *player, int turn_count, int num_players
       }
     }
 
-    //if the dice number a player has to move is not six, then it will move the selected token (which is outside the bases/home).
+    //if the dice number a player has to move is not six, then it will move the selected token (which is outside the bases).
     else{
       token_movement(turn_count + 1, dice_number, position[0], position[1] );
     }
@@ -521,7 +521,7 @@ void replace_new_position(Player_current_details *players, int player_number, st
     token2 = will_kill(board, player_number, token, row, column);
 
 
-    //will send the token2 back to its respective home
+    //will send the token2 back to its respective base
     if (token2.length() == 2) {
       for (int i = 0; i < board[row][column].length(); ++i ){
         if ( board[row][column].substr(i,2) == token2){
@@ -551,7 +551,7 @@ void replace_new_position(Player_current_details *players, int player_number, st
 of token positions. The integer player_killed represents which player is being killed. The string token2
 represents the token that is being killed.
 This function will modify the board by sending back the killed token(token2) to its respective base. It means
-token2 will now be stored in the respective players home.*/
+token2 will now be stored in the respective players base.*/
 void send_base(string board[][15], int player_killed, string token2){
   if (player_killed == 0){
     if ( token2[1] == '1'){
